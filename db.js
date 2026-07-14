@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-
+const dns=require("dns")
+dns.setServers(["8.8.8.8","8.8.4.4"])
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/studentDB'); 
+    await mongoose.connect('mongodb+srv://purnimatatina24_db_user:Leela@19@cluster0.zcpo10k.mongodb.net/'); 
     console.log('MongoDB Connected to studentDB');
   } catch (err) {
     console.error(err);
